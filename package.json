@@ -65,5 +65,8 @@
     "lint-staged": "^8.1.4",
     "prettier": "^1.16.4",
     "typescript": "^3.3.3"
+  },
+  "dependencies": {
+    "react-app-rewire-multiple-entry": "git+https://github.com/JimmyBastos/react-app-rewire-multiple-entry.git"
   }
 }
