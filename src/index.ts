@@ -2,12 +2,10 @@ import supportMultipleEntry from './supportMultipleEntry';
 import getValidSettings from './getValidSettings';
 import { EntryParam } from './types/entry';
 
-function main(params: EntryParam[]) {
-  const entries = getValidSettings(params);
-  const addMultiEntry = supportMultipleEntry(entries);
-  return {
-    addMultiEntry
-  }
+function MultipleEntries(params: EntryParam[]) {
+  return supportMultipleEntry(getValidSettings(params));
 };
-export default main;
-module.exports = main;
+
+
+
+module.exports = MultipleEntries;
