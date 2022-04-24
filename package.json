@@ -1,6 +1,6 @@
 {
   "name": "react-app-rewire-multiple-entries",
-  "version": "2.2.2",
+  "version": "2.2.7",
   "description": "Multiple Entry Support for Create-React-App",
   "main": "lib/index.js",
   "scripts": {
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JimmyBastos/react-app-rewire-multiple-entries.git"
+    "url": "git+https://github.com/BranceAgency/react-app-rewire-multiple-entries.git"
   },
   "keywords": [
     "react",
@@ -30,9 +30,9 @@
   "author": "benlv <992110146@qq.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/JimmyBastos/react-app-rewire-multiple-entries/issues"
+    "url": "https://github.com/BranceAgency/react-app-rewire-multiple-entries/issues"
   },
-  "homepage": "https://github.com/JimmyBastos/react-app-rewire-multiple-entries#readme",
+  "homepage": "https://github.com/BranceAgency/react-app-rewire-multiple-entries#readme",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"

@@ -36,18 +36,24 @@ $ npm install --save-dev react-app-rewired@1.6.2
 
 ```js
 // config-overrides.js
+const addMultipleEntries = require('react-app-rewire-multiple-entries');
 
-const multipleEntry = require('react-app-rewire-multiple-entry')([
+const addEntries = addMultipleEntries([
   {
-    entry: 'src/entry/landing.js',
-    template: 'public/landing.html',
-    outPath: '/landing.html'
+    entry: 'src/extension/content',
+    template: 'public/extension.html',
+    outPath: 'ignored/content.html'
+  },
+  {
+    entry: 'src/extension/worker',
+    template: 'public/extension.html',
+    outPath: 'ignored/worker.html'
   }
 ]);
 
 module.exports = {
   webpack: function(config, env) {
-    multipleEntry.addMultiEntry(config);
+    addEntries(config);
     return config;
   }
 };
@@ -58,13 +64,7 @@ module.exports = {
 ```js
 // config-overrides.js
 
-const multipleEntry = require('react-app-rewire-multiple-entry')([
-  {
-    entry: 'src/entry/landing.js',
-    template: 'public/landing.html',
-    outPath: '/landing.html'
-  }
-]);
+const addMultipleEntries = require('react-app-rewire-multiple-entries');
 
 const {
   // addBundleVisualizer,
@@ -74,7 +74,18 @@ const {
 
 module.exports = {
   webpack: override(
-    multipleEntry.addMultiEntry
+    addMultipleEntries([
+      {
+        entry: 'src/extension/content',
+        template: 'public/extension.html',
+        outPath: 'ignored/content.html'
+      },
+      {
+        entry: 'src/extension/worker',
+        template: 'public/extension.html',
+        outPath: 'ignored/worker.html'
+      }
+    ])
     // addBundleVisualizer()
   )
 };
@@ -84,8 +95,9 @@ module.exports = {
 
 ```js
 // config-overrides.js
+const addMultipleEntries = require('react-app-rewire-multiple-entries');
 
-const multipleEntry = require('react-app-rewire-multiple-entry')([
+const addEntries = addMultipleEntries([
   {
     // Webpack extra entry
     entry: 'src/entry/standard.js',
@@ -121,7 +133,7 @@ const multipleEntry = require('react-app-rewire-multiple-entry')([
 
 module.exports = {
   webpack: function(config, env) {
-    multipleEntry.addMultiEntry(config);
+    addEntries(config);
     return config;
   }
 };
