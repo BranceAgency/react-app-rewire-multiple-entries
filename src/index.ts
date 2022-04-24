@@ -6,6 +6,6 @@ function addMultipleEntries(params: EntryParam[]) {
   return supportMultipleEntry(getValidSettings(params));
 };
 
-
+export default addMultipleEntries;
 
 module.exports = addMultipleEntries;
