@@ -34,7 +34,7 @@ export default function(params:EntryParam[]):EntryWebpack[] | null {
     entry.outPath = entry.outPath.replace(/^\//, '').replace(/\/$/, '');
 
     const entryPath = path.resolve(pwd, entry.entry);
-    
+
     checkFileExist(entry.template);
     checkFileExist(entryPath);
 
