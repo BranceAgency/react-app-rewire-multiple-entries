@@ -6,13 +6,7 @@ without ejecting.
 1. Add [React App Rewire Multiple Entry] to your [Rewired] React app:
 
 ```bash
-npm install --save-dev react-app-rewired react-app-rewire-multiple-entry
-```
-
-##### For create-react-app 1.x or react-scripts-ts with Webpack 3:
-
-```bash
-$ npm install --save-dev react-app-rewired@1.6.2
+npm install --save-dev react-app-rewired react-app-rewire-multiple-entries
 ```
 
 2. Modify `package.json`
